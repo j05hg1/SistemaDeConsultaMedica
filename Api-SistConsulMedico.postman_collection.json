@@ -1,0 +1,804 @@
+{
+	"info": {
+		"_postman_id": "6bcfcdff-1382-4439-9a1f-9a4855dfa79d",
+		"name": "Api/SistConsulMedico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23183659"
+	},
+	"item": [
+		{
+			"name": "Paciente",
+			"item": [
+				{
+					"name": "Paciente (Validación)",
+					"item": [
+						{
+							"name": "Crear Paciente (Validación)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"\",\r\n  \"documentoIdentidad\": \"\",\r\n  \"fechaNacimiento\": null,\r\n  \"telefono\": \"123456789012345678901\",\r\n  \"correoElectronico\": \"correo-no-valido\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pacientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pacientes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Obtener Paciente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/pacientes/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pacientes",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Paciente",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Carlos\",\r\n  \"documentoIdentidad\": \"92316883\",\r\n  \"fechaNacimiento\": \"1980-04-10\",\r\n  \"telefono\": \"3053214567\",\r\n  \"correoElectronico\": \"juan@correo.com\",\r\n  \"direccion\": \"Calle 123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Paciente 2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Santiago\",\r\n  \"documentoIdentidad\": \"29613883\",\r\n  \"fechaNacimiento\": \"1960-02-11\",\r\n  \"telefono\": \"3054768798\",\r\n  \"correoElectronico\": \"santiago@correo.com\",\r\n  \"direccion\": \"Por ahi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Paciente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Santiago\",\r\n  \"documentoIdentidad\": \"29613883\",\r\n  \"fechaNacimiento\": \"1960-02-11\",\r\n  \"telefono\": \"3054768798\",\r\n  \"correoElectronico\": \"santiago@correo.com\",\r\n  \"direccion\": \"Barrio la Luna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pacientes/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pacientes",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Paciente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/pacientes/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pacientes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medico",
+			"item": [
+				{
+					"name": "Obtener Medico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Medico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Laura\",\r\n  \"apellido\": \"García\",\r\n  \"especialidad\": \"Pediatría\",\r\n  \"numeroLicencia\": \"MG-1234\",\r\n  \"telefono\": \"3111234567\",\r\n  \"correoElectronico\": \"laura.garcia@ejemplo.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Medico 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Carloss\",\r\n  \"apellido\": \"Mendozaa\",\r\n  \"especialidad\": \"Cardiologíaa\",\r\n  \"numeroLicencia\": \"LIC9877\",\r\n  \"telefono\": \"3011122233\",\r\n  \"correoElectronico\": \"carloss.mendoza@medico.com\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Medico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Carlos\",\r\n  \"apellido\": \"Mendosa\",\r\n  \"especialidad\": \"Cardiología\",\r\n  \"numeroLicencia\": \"LIC9879\",\r\n  \"telefono\": \"3011122233\",\r\n  \"correoElectronico\": \"carlos.mendoza@medico.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/medicos/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medicos",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Medico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/medicos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medicos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consulta Medica",
+			"item": [
+				{
+					"name": "Obtener Consulta Medica",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        <th>Consulta ID</th>\r",
+									"        <th>Fecha</th>\r",
+									"        <th>Hora</th>\r",
+									"        <th>Motivo de Consulta</th>\r",
+									"        <th>Diagnóstico</th>\r",
+									"        <th>Paciente ID</th>\r",
+									"        <th>Nombre del Paciente</th>\r",
+									"        <th>Documento de Identidad</th>\r",
+									"        <th>Fecha de Nacimiento</th>\r",
+									"        <th>Teléfono del Paciente</th>\r",
+									"        <th>Correo Electrónico del Paciente</th>\r",
+									"        <th>Dirección del Paciente</th>\r",
+									"        <th>Médico ID</th>\r",
+									"        <th>Nombre del Médico</th>\r",
+									"        <th>Apellido del Médico</th>\r",
+									"        <th>Especialidad del Médico</th>\r",
+									"        <th>Número de Licencia del Médico</th>\r",
+									"        <th>Teléfono del Médico</th>\r",
+									"        <th>Correo Electrónico del Médico</th>\r",
+									"    </tr>\r",
+									"    \r",
+									"    {{#each response}}\r",
+									"        <tr>\r",
+									"            <td>{{idConsulta}}</td>\r",
+									"            <td>{{fecha}}</td>\r",
+									"            <td>{{hora}}</td>\r",
+									"            <td>{{motivoConsulta}}</td>\r",
+									"            <td>{{diagnostico}}</td>\r",
+									"            <td>{{paciente.idPaciente}}</td>\r",
+									"            <td>{{paciente.nombre}}</td>\r",
+									"            <td>{{paciente.documentoIdentidad}}</td>\r",
+									"            <td>{{paciente.fechaNacimiento}}</td>\r",
+									"            <td>{{paciente.telefono}}</td>\r",
+									"            <td>{{paciente.correoElectronico}}</td>\r",
+									"            <td>{{paciente.direccion}}</td>\r",
+									"            <td>{{medico.idMedico}}</td>\r",
+									"            <td>{{medico.nombre}}</td>\r",
+									"            <td>{{medico.apellido}}</td>\r",
+									"            <td>{{medico.especialidad}}</td>\r",
+									"            <td>{{medico.numeroLicencia}}</td>\r",
+									"            <td>{{medico.telefono}}</td>\r",
+									"            <td>{{medico.correoElectronico}}</td>\r",
+									"        </tr>\r",
+									"    {{/each}}\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    return {response: pm.response.json()}\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Consulta Medica",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fecha\": \"2025-05-02\",\r\n  \"hora\": \"14:15:00\",\r\n  \"motivoConsulta\": \"Revisión de presión arterial\",\r\n  \"diagnostico\": \"Hipertensión leve\",\r\n  \"paciente\": { \"idPaciente\": 2 },\r\n  \"medico\": { \"idMedico\": 1 }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Consulta Medica 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fecha\": \"2025-05-02\",\r\n  \"hora\": \"11:45:00\",\r\n  \"motivoConsulta\": \"Dolor abdominal frecuente\",\r\n  \"diagnostico\": \"Gastritis\",\r\n  \"paciente\": { \"idPaciente\": 5 },\r\n  \"medico\": { \"idMedico\": 1 },\r\n  \"horaFin\": \"12:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Consulta Medica",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fecha\": \"2025-05-02\",\r\n  \"hora\": \"11:30:00\",\r\n  \"motivoConsulta\": \"Laboratorio\",\r\n  \"diagnostico\": \"Se detecta sangre en orina\",\r\n  \"paciente\": { \"idPaciente\": 5 },\r\n  \"medico\": { \"idMedico\": 1 },\r\n  \"horaFin\": \"11:45:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/consultas/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"consultas",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Consulta Medica Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/consultas/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"consultas",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Receta Medica",
+			"item": [
+				{
+					"name": "Obtener Receta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/recetas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"recetas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Receta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"medicamento\": \"Enalapril\",\r\n  \"dosis\": \"10 mg\",\r\n  \"instrucciones\": \"Tomar una vez al día en la mañana con agua\",\r\n  \"consulta\": { \"idConsulta\": 4 }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/recetas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"recetas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Receta 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"medicamento\": \"Advil\",\r\n  \"dosis\": \"300 mg\",\r\n  \"instrucciones\": \"Tomar cada 12 horas en caos de persistir sintomas\",\r\n  \"consulta\": { \"idConsulta\": 2 }\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/recetas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"recetas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Receta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"medicamento\": \"Naproxeno\",\r\n  \"dosis\": \"250 mg\",\r\n  \"instrucciones\": \"Tomar cada 8 horas si los sintomas persisten\",\r\n  \"consulta\": { \"idConsulta\": 2 }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/recetas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"recetas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Receta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/recetas/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"recetas",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Obtener Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"admin123\",\r\n  \"rol\": \"ADMIN\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Usuario 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"soporte\",\r\n  \"password\": \"soporte123\",\r\n  \"rol\": \"SUPPORT\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"soporte\",\r\n  \"password\": \"soporte123\",\r\n  \"rol\": \"SOPORTE\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
